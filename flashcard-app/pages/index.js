@@ -16,7 +16,7 @@ export default function Home() {
 
       <Header />
       
-      <main>
+      <main className="container mx-auto px-6 py-8">
         <HeroSection />
         <FeatureSection />
         <TestimonialSection />
