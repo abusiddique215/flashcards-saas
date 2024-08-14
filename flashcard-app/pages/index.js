@@ -8,15 +8,15 @@ import Footer from '../components/Footer'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-sky">
+    <div className="min-h-screen bg-white">
       <Head>
-        <title>Flashcard App</title>
+        <title>FlashAI - AI-Powered Flashcards</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
       
-      <main className="container mx-auto px-6 py-8">
+      <main>
         <HeroSection />
         <FeatureSection />
         <TestimonialSection />
