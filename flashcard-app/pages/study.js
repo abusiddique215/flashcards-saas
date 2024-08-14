@@ -1,30 +1,85 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+import { useUser } from '@clerk/nextjs';
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, query, where, getDocs } from 'firebase/firestore';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-// Mock data for flashcards
-const mockFlashcards = [
-  { id: 1, question: "What is the capital of France?", answer: "Paris" },
-  { id: 2, question: "Who wrote 'Romeo and Juliet'?", answer: "William Shakespeare" },
-  { id: 3, question: "What is the chemical symbol for gold?", answer: "Au" },
-];
+// Initialize Firebase (replace with your config)
+const firebaseConfig = {
+  // Your Firebase configuration
+};
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 export default function StudyFlashcards() {
+  const { isSignedIn, user } = useUser();
+  const [flashcardSets, setFlashcardSets] = useState([]);
+  const [currentSetIndex, setCurrentSetIndex] = useState(0);
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
 
-  const currentCard = mockFlashcards[currentCardIndex];
+  useEffect(() => {
+    if (isSignedIn) {
+      fetchFlashcardSets();
+    }
+  }, [isSignedIn, user]);
+
+  const fetchFlashcardSets = async () => {
+    const q = query(collection(db, 'flashcardSets'), where('userId', '==', user.id));
+    const querySnapshot = await getDocs(q);
+    const sets = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    setFlashcardSets(sets);
+  };
+
+  const currentSet = flashcardSets[currentSetIndex];
+  const currentCard = currentSet?.flashcards[currentCardIndex];
 
   const nextCard = () => {
-    setCurrentCardIndex((prevIndex) => (prevIndex + 1) % mockFlashcards.length);
+    if (currentCardIndex < currentSet.flashcards.length - 1) {
+      setCurrentCardIndex(currentCardIndex + 1);
+    } else if (currentSetIndex < flashcardSets.length - 1) {
+      setCurrentSetIndex(currentSetIndex + 1);
+      setCurrentCardIndex(0);
+    }
     setShowAnswer(false);
   };
 
   const previousCard = () => {
-    setCurrentCardIndex((prevIndex) => (prevIndex - 1 + mockFlashcards.length) % mockFlashcards.length);
+    if (currentCardIndex > 0) {
+      setCurrentCardIndex(currentCardIndex - 1);
+    } else if (currentSetIndex > 0) {
+      setCurrentSetIndex(currentSetIndex - 1);
+      setCurrentCardIndex(flashcardSets[currentSetIndex - 1].flashcards.length - 1);
+    }
     setShowAnswer(false);
   };
+
+  if (!isSignedIn) {
+    return (
+      <div className="min-h-screen bg-gray-100">
+        <Header />
+        <main className="container mx-auto px-4 py-8">
+          <h1 className="text-3xl font-bold mb-8">Please sign in to study flashcards</h1>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (flashcardSets.length === 0) {
+    return (
+      <div className="min-h-screen bg-gray-100">
+        <Header />
+        <main className="container mx-auto px-4 py-8">
+          <h1 className="text-3xl font-bold mb-8">No Flashcards Available</h1>
+          <p>Please create some flashcards first.</p>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-100">

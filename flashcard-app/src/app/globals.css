@@ -3,31 +3,102 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --coral: #ff7f7f;
+  --mint: #7fbfb3;
+  --sky: #e0f7fa;
+  --light-mint: #e0f7f7;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #f3f4f6;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.bento-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.bento-item {
+  background-color: #e0f7fa;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.bento-item-coral {
+  background-color: #ff7f7f;
+  color: white;
+}
+
+.bento-item-mint {
+  background-color: #7fbfb3;
+  color: white;
+}
+
+.bento-item-sky {
+  background-color: #e0f7fa;
+}
+
+.bento-item-large {
+  grid-column: span 2;
+}
+
+.bento-item-full {
+  grid-column: 1 / -1;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn-blue {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-blue:hover {
+  background-color: #2563eb;
+}
+
+.btn-yellow {
+  background-color: #fbbf24;
+  color: #1f2937;
+}
+
+.btn-yellow:hover {
+  background-color: #f59e0b;
+}
+
+.btn-green {
+  background-color: #10b981;
+  color: white;
+}
+
+.btn-green:hover {
+  background-color: #059669;
+}
+
+.nav-link {
+  margin: 0 0.75rem;
+  color: #4b5563;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #1f2937;
 }
