@@ -12,7 +12,7 @@ export default function Header() {
         <div className="flex items-center">
           <a href="#" className="nav-link">Features</a>
           <a href="#" className="nav-link">Pricing</a>
-          <a href="#" className="nav-link">About</a>
+          <a href="#testimonials" className="nav-link">Testimonials</a>
           <Link href="/study" className="nav-link">Study</Link>
           <Link href="/create" className="btn btn-blue ml-4">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 inline-block mr-1" viewBox="0 0 20 20" fill="currentColor">
