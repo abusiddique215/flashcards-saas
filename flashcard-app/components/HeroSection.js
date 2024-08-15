@@ -1,67 +1,80 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HeroSection() {
   return (
     <div className="bento-container">
       <div className="bento-grid">
         <div className="bento-item bento-item-coral">
-          <svg className="w-12 h-12 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M16.28 13.61C15.15 14.74 13.53 15.09 12.1 14.64L9.51001 17.22C9.33001 17.41 8.96001 17.53 8.69001 17.49L7.49001 17.33C7.09001 17.28 6.73001 16.9 6.67001 16.51L6.51001 15.31C6.47001 15.05 6.60001 14.68 6.78001 14.49L9.36001 11.91C8.92001 10.48 9.26001 8.86001 10.39 7.73001C12.01 6.11001 14.65 6.11001 16.28 7.73001C17.9 9.34001 17.9 11.98 16.28 13.61Z" stroke="white" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M10.45 16.28L9.59998 15.42" stroke="white" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M13.3945 10.7H13.4035" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-          <h2 className="text-2xl font-bold mb-4">AI-Powered Flashcards</h2>
-          <p className="mb-6">Revolutionize your learning with our cutting-edge AI technology. Create personalized flashcards effortlessly and boost your retention.</p>
+          <h2 className="text-2xl font-bold mb-2">Fether nbortes Foduecpprion.</h2>
+          <p className="text-sm">Hikku essentiaer hase teus to Phari jus hase nomen dolge. Metus erat, eros er messen haselly i moding, jure nisi jus iny messen. Phare nunc, tetus erat phassim nectus.</p>
         </div>
         <div className="bento-item bento-item-mint">
-          <svg className="w-12 h-12 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 2V5" stroke="white" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M16 2V5" stroke="white" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M3.5 9.09H20.5" stroke="white" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="white" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M15.6947 13.7H15.7037" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M15.6947 16.7H15.7037" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M11.9955 13.7H12.0045" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M11.9955 16.7H12.0045" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M8.29431 13.7H8.30329" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M8.29431 16.7H8.30329" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-          <h2 className="text-2xl font-bold mb-4">Smart Study Sessions</h2>
-          <p className="mb-6">Optimize your study time with adaptive learning algorithms. Our AI tailors each session to your unique learning style and progress.</p>
-          <Link href="/study" className="btn btn-yellow">Start Learning</Link>
+          <h3 className="text-lg font-bold mb-2">Festoor Nhec</h3>
+          <p className="font-semibold">Ciniles Shique Hisciom"</p>
+          <p className="text-sm mb-4">Greeg Ketting Har pant esitly crag pung, gellery eristentis aner esat Sise cra jumet edocum uy ered ectum. Loresetilg metus te mectuser cresed ressentir re metus trpidic ecentia soont teset in eadle opuera e ner velly.</p>
+          <button className="btn btn-yellow">Otumy Serteme</button>
         </div>
         <div className="bento-item bento-item-sky">
-          <svg className="w-12 h-12 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M7 13H13" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M7 17H11" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-          <h2 className="text-2xl font-bold mb-4">Effortless Content Creation</h2>
-          <p className="mb-6">Transform any text into comprehensive flashcard sets instantly. Our AI analyzes your content and generates relevant questions and answers.</p>
-          <Link href="/create" className="btn btn-blue">Try Now</Link>
+          <h2 className="text-xl font-bold mb-2">Earftanad kte bef vmjafems</h2>
+          <p className="text-sm mb-4">Rescitilis or tis Sotanfindinirontos. Sorlengoes inhapd innidiertieng Niigland sodisg, eartide Sacte sol turrand or sha millinde. Sginna rnitegers so ola you ant yorha limpn fatella, au rangen initium.</p>
+          <button className="btn btn-blue">Relarver</button>
         </div>
-        <div className="bento-item bento-item-large">
-          <h3 className="text-xl font-bold mb-4">Flashcard Creation</h3>
-          <p className="mb-4">Create and customize your flashcards with ease. Add images, text, and more to make your study materials engaging and effective.</p>
-          <button className="btn btn-blue">Try it now</button>
+        <div className="bento-item bento-item-large bento-item-light">
+          <div className="flex items-center">
+            <div className="mr-6 flex-shrink-0">
+              <h3 className="text-lg font-bold mb-2">Hornko to nnniagd inatines</h3>
+              <Image src="/flashcard-icon.svg" alt="Flashcard Icon" width={120} height={120} className="my-4" />
+              <button className="btn btn-blue">10 Flactraits</button>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold mb-2">Ssbcragoteay Reodam</h3>
+              <p className="text-sm mb-4">Eseesating estlgtion centa te crintins end entfise. Jampitise rime, thofice ciga ests verte caentesrers sarg potelyte cig veressentate nusels sosentr e cteli esat enem ens tiactos.</p>
+              <button className="btn btn-outline">Nity tehoitse</button>
+            </div>
+          </div>
         </div>
-        <div className="bento-item">
-          <h3 className="text-xl font-bold mb-4">AI-Powered Learning</h3>
-          <p className="mb-4">Our advanced AI algorithms analyze your performance and adapt your study sessions for maximum efficiency and retention.</p>
-          <button className="btn btn-green">Learn more</button>
+        <div className="bento-item bento-item-light">
+          <h3 className="text-lg font-bold mb-2">Cdire Reroyer</h3>
+          <Image src="/study-icon.svg" alt="Study Icon" width={120} height={120} className="my-4 mx-auto" />
+          <p className="text-sm mb-4">Wlati egeaeh innte teets da pencin sencemay ov ren seegaly gvnon. ofanstarte su onestag nesa rer dectite og stiemutias stugret orgeste e sesa agend aud ditte to saud jateste tetre ed ottitite hersnt.</p>
+          <button className="btn btn-coral">Nitester</button>
         </div>
-        <div className="bento-item bento-item-large">
-          <h3 className="text-xl font-bold mb-4">Pricing Plans</h3>
-          <p className="mb-4">Choose the perfect plan for your learning journey.</p>
-          <button className="btn btn-blue">View plans</button>
+        <div className="bento-item bento-item-light">
+          <h3 className="text-lg font-bold mb-2">Cdohing*</h3>
+          <p className="text-sm mb-4">Sctinesif estlio fettitiate dime enet jertec, sesenteer ensentitesenting prethert e ntieg Centitr's cesenteer. Nector Setlier es ener resce enting tely ontiner yese tre te centate tees tetesente nes petiten steres tise etesiteste sesy dergegitee ef teentty, sester reenta.</p>
+          <button className="btn btn-outline">Seges oeer noetas</button>
         </div>
-        <div className="bento-item">
-          <h3 className="text-xl font-bold mb-4">Get Started</h3>
-          <p className="mb-4">Begin your AI-powered learning experience today.</p>
-          <button className="btn btn-green">Sign up now</button>
+        <div className="bento-item bento-item-large bento-item-light">
+          <div className="flex items-center">
+            <div className="mr-6 flex-shrink-0">
+              <Image src="/avatar.svg" alt="Avatar" width={64} height={64} className="rounded-full mb-2" />
+              <p className="text-sm font-semibold">Heelow</p>
+              <p className="text-xs">Seeget ame terk</p>
+              <p className="text-xs">Meding 1711 Cesentis</p>
+            </div>
+            <div>
+              <p className="text-sm">The quiltim esegeng heentess tay utitent a guared o stece tere e entto teetec esco cering entitee tesa te sestite jute sesentete gery entser cer es etegees te.</p>
+              <button className="btn btn-blue">Reseese erer 314 sentees</button>
+            </div>
+          </div>
+        </div>
+        <div className="bento-item bento-item-mint">
+          <h3 className="text-lg font-bold mb-2">Heah Wim Pleonmresoval Our Bdeocsoon on Peceitars</h3>
+          <p className="text-sm mb-4">Steg di ergen he pergy pr sitese othy mettien ets steny yeer gentitere tley gte esentite e etey tete tees ter venier e entieg rent.</p>
+          <button className="btn btn-dark">Retiter teritee</button>
+        </div>
+        <div className="bento-item bento-item-mint">
+          <h3 className="text-lg font-bold mb-2">Sherratties Wass!</h3>
+          <p className="text-sm mb-4">Steg di ergen he pergy pr sitese othy mettien ets steny yeer gentitere tley gte esentite e etey tete tees ter venier e entieg rent. Ctitee tese tetes etees ter steggs petite titeter etee otte cretee vesy, erestete tire o cencteting te tte o meente rer trete tege.</p>
+          <button className="btn btn-dark">Retiter teritee</button>
+        </div>
+        <div className="bento-item bento-item-coral">
+          <h3 className="text-lg font-bold mb-2">Fecempry</h3>
+          <p className="text-sm mb-1">Spiegeh, setiromes co mutier.</p>
+          <p className="text-sm mb-1">Asetites teter ter sesentete te cregit teente es erges e ser terteg etege e vette e tee etett e ere geenter etere seenter.</p>
+          <p className="text-sm mb-1">Nereser e egett e ette teregeg tere ges gesentee. Serer Ceente enteg tere terer te serent entere, sentere tese te tte entete. Er ett teettr eres tete cetenst.</p>
         </div>
       </div>
     </div>
