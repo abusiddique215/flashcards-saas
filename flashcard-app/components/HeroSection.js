@@ -7,76 +7,84 @@ export default function HeroSection() {
     <div className="bento-container">
       <div className="bento-grid">
         <div className="bento-item bento-item-coral">
-          <h2 className="text-2xl font-bold mb-2">Fether nbortes Foduecpprion.</h2>
-          <p className="text-sm">Hikku essentiaer hase teus to Phari jus hase nomen dolge. Metus erat, eros er messen haselly i moding, jure nisi jus iny messen. Phare nunc, tetus erat phassim nectus.</p>
+          <h2 className="text-2xl font-bold mb-2">AI-Powered Flashcard Creation</h2>
+          <p className="text-sm">Revolutionize your study routine with our AI-powered flashcard generator. Create effective study materials in seconds, tailored to your learning needs.</p>
         </div>
         <div className="bento-item bento-item-mint">
-          <h3 className="text-lg font-bold mb-2">Festoor Nhec</h3>
-          <p className="font-semibold">Ciniles Shique Hisciom"</p>
-          <p className="text-sm mb-4">Greeg Ketting Har pant esitly crag pung, gellery eristentis aner esat Sise cra jumet edocum uy ered ectum. Loresetilg metus te mectuser cresed ressentir re metus trpidic ecentia soont teset in eadle opuera e ner velly.</p>
-          <button className="btn btn-yellow">Otumy Serteme</button>
+          <h3 className="text-lg font-bold mb-2">Smart Study Sessions</h3>
+          <p className="font-semibold">"Optimize Your Learning"</p>
+          <p className="text-sm mb-4">Our AI analyzes your performance and adapts your study sessions for maximum efficiency. Experience personalized learning that evolves with your progress.</p>
+          <button className="btn btn-yellow">Start Learning</button>
         </div>
         <div className="bento-item bento-item-sky">
-          <h2 className="text-xl font-bold mb-2">Earftanad kte bef vmjafems</h2>
-          <p className="text-sm mb-4">Rescitilis or tis Sotanfindinirontos. Sorlengoes inhapd innidiertieng Niigland sodisg, eartide Sacte sol turrand or sha millinde. Sginna rnitegers so ola you ant yorha limpn fatella, au rangen initium.</p>
-          <button className="btn btn-blue">Relarver</button>
+          <h2 className="text-xl font-bold mb-2">Effortless Flashcard Management</h2>
+          <p className="text-sm mb-4">Organize, edit, and review your flashcards with ease. Our intuitive interface makes managing your study materials a breeze, letting you focus on what matters most - learning.</p>
+          <button className="btn btn-blue">Explore Features</button>
         </div>
         <div className="bento-item bento-item-large bento-item-light">
           <div className="flex items-center">
             <div className="mr-6 flex-shrink-0">
-              <h3 className="text-lg font-bold mb-2">Hornko to nnniagd inatines</h3>
-              <Image src="/flashcard-icon.svg" alt="Flashcard Icon" width={120} height={120} className="my-4" />
-              <button className="btn btn-blue">10 Flactraits</button>
+              <h3 className="text-lg font-bold mb-2">Boost Your Study Efficiency</h3>
+              <Image src="/flashcard-icon.svg" alt="Flashcard Illustration" width={200} height={200} className="my-4" />
+              <button className="btn btn-blue">Create Flashcards</button>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-2">Ssbcragoteay Reodam</h3>
-              <p className="text-sm mb-4">Eseesating estlgtion centa te crintins end entfise. Jampitise rime, thofice ciga ests verte caentesrers sarg potelyte cig veressentate nusels sosentr e cteli esat enem ens tiactos.</p>
-              <button className="btn btn-outline">Nity tehoitse</button>
+              <h3 className="text-lg font-bold mb-2">AI-Powered Insights</h3>
+              <p className="text-sm mb-4">Gain valuable insights into your learning patterns and progress. Our AI provides personalized recommendations to help you study smarter, not harder.</p>
+              <button className="btn btn-outline">View Demo</button>
             </div>
           </div>
         </div>
         <div className="bento-item bento-item-light">
-          <h3 className="text-lg font-bold mb-2">Cdire Reroyer</h3>
+          <h3 className="text-lg font-bold mb-2">Collaborative Learning</h3>
           <Image src="/study-icon.svg" alt="Study Icon" width={120} height={120} className="my-4 mx-auto" />
-          <p className="text-sm mb-4">Wlati egeaeh innte teets da pencin sencemay ov ren seegaly gvnon. ofanstarte su onestag nesa rer dectite og stiemutias stugret orgeste e sesa agend aud ditte to saud jateste tetre ed ottitite hersnt.</p>
-          <button className="btn btn-coral">Nitester</button>
+          <p className="text-sm mb-4">Share your flashcard sets with friends or study groups. Collaborate on creating and refining study materials, making learning a social and engaging experience.</p>
+          <button className="btn btn-coral">Join Community</button>
         </div>
         <div className="bento-item bento-item-light">
-          <h3 className="text-lg font-bold mb-2">Cdohing*</h3>
-          <p className="text-sm mb-4">Sctinesif estlio fettitiate dime enet jertec, sesenteer ensentitesenting prethert e ntieg Centitr's cesenteer. Nector Setlier es ener resce enting tely ontiner yese tre te centate tees tetesente nes petiten steres tise etesiteste sesy dergegitee ef teentty, sester reenta.</p>
-          <button className="btn btn-outline">Seges oeer noetas</button>
+          <h3 className="text-lg font-bold mb-2">Mobile Learning</h3>
+          <div className="flex items-center justify-between">
+            <div className="w-1/2">
+              <p className="text-sm mb-4">Take your flashcards anywhere with our mobile app. Study on-the-go, sync your progress across devices, and make the most of your spare moments for effective learning.</p>
+              <button className="btn btn-outline">Download App</button>
+            </div>
+            <div className="w-1/2 flex justify-center">
+              <Image src="/study-illustration.svg" alt="Mobile Study Illustration" width={150} height={150} className="my-4" />
+            </div>
+          </div>
         </div>
         <div className="bento-item bento-item-large bento-item-light">
           <div className="flex items-center">
             <div className="mr-6 flex-shrink-0">
-              <Image src="/avatar.svg" alt="Avatar" width={64} height={64} className="rounded-full mb-2" />
-              <p className="text-sm font-semibold">Heelow</p>
-              <p className="text-xs">Seeget ame terk</p>
-              <p className="text-xs">Meding 1711 Cesentis</p>
+              <Image src="/avatar.svg" alt="User Avatar" width={64} height={64} className="rounded-full mb-2" />
+              <p className="text-sm font-semibold">Sarah</p>
+              <p className="text-xs">Medical Student</p>
+              <p className="text-xs">Created 1711 Flashcards</p>
             </div>
             <div>
-              <p className="text-sm">The quiltim esegeng heentess tay utitent a guared o stece tere e entto teetec esco cering entitee tesa te sestite jute sesentete gery entser cer es etegees te.</p>
-              <button className="btn btn-blue">Reseese erer 314 sentees</button>
+              <p className="text-sm">"FlashAI has transformed my study routine. The AI-generated flashcards save me hours of preparation time, and the adaptive learning system helps me focus on areas where I need improvement. It's like having a personal tutor!"</p>
+              <button className="btn btn-blue">Read 314 reviews</button>
             </div>
           </div>
         </div>
         <div className="bento-item bento-item-mint">
-          <h3 className="text-lg font-bold mb-2">Heah Wim Pleonmresoval Our Bdeocsoon on Peceitars</h3>
-          <p className="text-sm mb-4">Steg di ergen he pergy pr sitese othy mettien ets steny yeer gentitere tley gte esentite e etey tete tees ter venier e entieg rent.</p>
-          <button className="btn btn-dark">Retiter teritee</button>
+          <h3 className="text-lg font-bold mb-2">Spaced Repetition for Long-Term Retention</h3>
+          <p className="text-sm mb-4">Our AI implements proven spaced repetition techniques to optimize your memory retention. Study smarter and remember information for longer periods with our scientifically-backed approach.</p>
+          <button className="btn btn-dark">Learn More</button>
         </div>
         <div className="bento-item bento-item-mint">
-          <h3 className="text-lg font-bold mb-2">Sherratties Wass!</h3>
-          <p className="text-sm mb-4">Steg di ergen he pergy pr sitese othy mettien ets steny yeer gentitere tley gte esentite e etey tete tees ter venier e entieg rent. Ctitee tese tetes etees ter steggs petite titeter etee otte cretee vesy, erestete tire o cencteting te tte o meente rer trete tege.</p>
-          <button className="btn btn-dark">Retiter teritee</button>
+          <h3 className="text-lg font-bold mb-2">Customizable Flashcards</h3>
+          <p className="text-sm mb-4">Tailor your flashcards to your unique learning style. Add images, audio, and rich text to create engaging and memorable study materials. Our AI can even suggest relevant media to enhance your learning experience.</p>
+          <button className="btn btn-dark">Customize Now</button>
         </div>
         <div className="bento-item bento-item-coral">
-          <h3 className="text-lg font-bold mb-2">Fecempry</h3>
-          <p className="text-sm mb-1">Spiegeh, setiromes co mutier.</p>
-          <p className="text-sm mb-1">Asetites teter ter sesentete te cregit teente es erges e ser terteg etege e vette e tee etett e ere geenter etere seenter.</p>
-          <p className="text-sm mb-1">Nereser e egett e ette teregeg tere ges gesentee. Serer Ceente enteg tere terer te serent entere, sentere tese te tte entete. Er ett teettr eres tete cetenst.</p>
+          <h3 className="text-lg font-bold mb-2">Progress Tracking</h3>
+          <p className="text-sm mb-1">Monitor your learning journey with detailed analytics.</p>
+          <p className="text-sm mb-1">Track your performance over time, identify areas for improvement, and celebrate your achievements as you progress through your studies.</p>
+          <p className="text-sm mb-1">Set goals, earn badges, and stay motivated on your path to mastery with our comprehensive progress tracking system.</p>
         </div>
       </div>
+      
     </div>
   );
 }

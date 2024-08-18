@@ -1,19 +1,12 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { useUser } from '@clerk/nextjs';
-import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, addDoc } from 'firebase/firestore';
+import { db } from '../firebase';
+import { collection, addDoc } from 'firebase/firestore';
 import { Configuration, OpenAIApi } from 'openai';
 import { loadStripe } from '@stripe/stripe-js';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-
-// Initialize Firebase (replace with your config)
-const firebaseConfig = {
-  // Your Firebase configuration
-};
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
 
 // Initialize OpenAI
 const configuration = new Configuration({

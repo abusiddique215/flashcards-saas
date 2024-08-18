@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --coral: #ff7f7f;
-  --mint: #7fbfb3;
-  --sky: #e0f7fa;
-  --light-mint: #e0f7f7;
+  --coral: linear-gradient(135deg, #ff7f7f, #ff9999);
+  --mint: linear-gradient(135deg, #7fbfb3, #a0d8d0);
+  --sky: linear-gradient(135deg, #e0f7fa, #b3e5fc);
+  --light-mint: linear-gradient(135deg, #e0f7f7, #c1e8e8);
 }
 
 body {
@@ -17,21 +17,25 @@ body {
 .bento-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   background-color: #ffffff;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 1.5rem;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 30;
 }
 
 .bento-item {
-  border-radius: 1rem;
-  padding: 1.5rem;
+  border-radius: 0.75rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -40,23 +44,24 @@ body {
 }
 
 .bento-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-2px);
 }
 
 .bento-item-coral {
-  background-color: var(--coral);
+  background: var(--coral);
   color: white;
   grid-column: span 2;
 }
 
 .bento-item-mint {
-  background-color: var(--mint);
+  background: var(--mint);
   color: white;
   grid-column: span 2;
 }
 
 .bento-item-sky {
-  background-color: var(--sky);
+  background: var(--sky);
+  color: #333;
   grid-column: span 2;
 }
 
@@ -69,7 +74,8 @@ body {
 }
 
 .bento-item-light {
-  background-color: var(--light-mint);
+  background: var(--light-mint);
+  color: #333;
 }
 
 .btn {
@@ -147,19 +153,29 @@ body {
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.25rem;
 }
 
 p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 18px;
+  }
+  
+  .bento-container {
+    max-width: 1600px;
+  }
 }
