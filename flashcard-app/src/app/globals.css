@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --coral: linear-gradient(135deg, #ff7f7f, #ff9999);
-  --mint: linear-gradient(135deg, #7fbfb3, #a0d8d0);
+  --coral: linear-gradient(135deg, #f88472, #ffa799);
+  --mint: linear-gradient(135deg, #65ccb7, #8edfd0);
   --sky: linear-gradient(135deg, #e0f7fa, #b3e5fc);
-  --light-mint: linear-gradient(135deg, #e0f7f7, #c1e8e8);
+  --light-mint: linear-gradient(135deg, #e1f4eb, #f0faf6);
 }
 
 body {
@@ -114,12 +114,12 @@ body {
 }
 
 .btn-coral {
-  background-color: var(--coral);
+  background: var(--coral);
   color: white;
 }
 
 .btn-coral:hover {
-  background-color: #ff6b6b;
+  background: linear-gradient(135deg, #f77361, #ff9688);
 }
 
 .btn-outline {
@@ -152,6 +152,19 @@ body {
   color: #1f2937;
 }
 
+h2, h3 {
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  fill: none;
+  stroke: #51256f;
+  stroke-width: 2px;
+  stroke-dashoffset: -900;
+  stroke-dasharray: 900;
+  stroke-linecap: butt;
+  stroke-linejoin: round;
+  animation: dash 2.5s ease-in-out forwards;
+}
+
 h2 {
   font-size: 1.75rem;
   font-weight: 700;
@@ -165,9 +178,42 @@ h3 {
 }
 
 p {
+  font-family: Arial, sans-serif;
   font-size: 0.875rem;
   line-height: 1.6;
   margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes dash {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+.bento-item h2,
+.bento-item h3 {
+  color: transparent;
+  -webkit-text-stroke: 1px #51256f;
+}
+
+.bento-item-coral h2,
+.bento-item-coral h3,
+.bento-item-mint h2,
+.bento-item-mint h3 {
+  -webkit-text-stroke: 1px #ffffff;
+}
+
+.bento-item p {
+  color: inherit;
 }
 
 @media screen and (min-width: 1920px) {
@@ -178,4 +224,79 @@ p {
   .bento-container {
     max-width: 1600px;
   }
+}
+
+.bento-content {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.bento-content.animate {
+  opacity: 1;
+}
+
+.bento-item h2,
+.bento-item h3 {
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  fill: none;
+  stroke: #51256f;
+  stroke-width: 2px;
+  stroke-dashoffset: -900;
+  stroke-dasharray: 900;
+  stroke-linecap: butt;
+  stroke-linejoin: round;
+  animation: none;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.bento-content.animate h2,
+.bento-content.animate h3 {
+  animation: dash 2.5s ease-in-out forwards, fadeIn 1s ease-in-out forwards;
+}
+
+.bento-item p {
+  font-family: Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.bento-content.animate p {
+  opacity: 1;
+  transition-delay: 1s;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: -900;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.bento-item-coral h2,
+.bento-item-coral h3,
+.bento-item-mint h2,
+.bento-item-mint h3 {
+  stroke: #ffffff;
+}
+
+.bento-item p {
+  color: inherit;
 }
