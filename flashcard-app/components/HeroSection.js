@@ -14,7 +14,7 @@ function AnimatedBentoContent({ children }) {
           entry.target.classList.add('animate');
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }
     );
 
     if (contentRef.current) {
@@ -38,7 +38,7 @@ export default function HeroSection() {
         <div className="bento-item bento-item-coral">
           <AnimatedBentoContent>
             <h2 className="text-2xl font-bold mb-2">AI-Powered Flashcard Creation</h2>
-            <Image src="/1st.png" alt="AI Flashcard Creation" width={150} height={150} />
+            <Image src="/qqqq.svg" alt="AI Flashcard Creation" width={150} height={150} />
             <p className="text-sm">Revolutionize your study routine with our AI-powered flashcard generator. Create effective study materials in seconds, tailored to your learning needs.</p>
             
           </AnimatedBentoContent>
@@ -56,7 +56,7 @@ export default function HeroSection() {
           <AnimatedBentoContent>
             <h2 className="text-xl font-bold mb-2">Effortless Flashcard Management</h2>
             <p className="text-sm mb-4">Organize, edit, and review your flashcards with ease. Our intuitive interface makes managing your study materials a breeze, letting you focus on what matters most - learning.</p>
-            <Image src="/flashcard-icon.svg" alt="AI Flashcard Creation" width={150} height={150} />
+            <Image src="/box1.svg" alt="AI Flashcard Creation" width={150} height={150} />
             <button className="btn btn-blue">Explore Features</button>
           </AnimatedBentoContent>
         </div>
@@ -74,7 +74,7 @@ export default function HeroSection() {
                 <p className="text-sm mb-4">Gain valuable insights into your learning patterns and progress. Our AI provides personalized recommendations to help you study smarter, not harder.</p>
                 
                 <button className="btn btn-outline">View Demo</button>
-                <Image src="/study-illustration.svg" alt="Study Efficiency" width={150} height={150} className="my-4" />
+                <Image src="/box4.svg" alt="Study Efficiency" width={150} height={150} className="my-4" />
               </AnimatedBentoContent>
             </div>
           </div>
@@ -82,7 +82,7 @@ export default function HeroSection() {
         <div className="bento-item bento-item-light">
           <AnimatedBentoContent>
             <h3 className="text-lg font-bold mb-2">Collaborative Learning</h3>
-            <Image src="/study-icon.svg" alt="Study Icon" width={120} height={120} className="my-4 mx-auto" />
+            <Image src="/box5.svg" alt="Study Icon" width={120} height={120} className="my-4 mx-auto" />
             <p className="text-sm mb-4">Share your flashcard sets with friends or study groups. Collaborate on creating and refining study materials, making learning a social and engaging experience.</p>
             <button className="btn btn-coral">Join Community</button>
           </AnimatedBentoContent>
@@ -123,7 +123,7 @@ export default function HeroSection() {
                 <h3 className="text-lg font-bold mb-2">Customer Reviews</h3>
                 <p className="text-sm">"FlashAI has transformed my study routine. The AI-generated flashcards save me hours of preparation time, and the adaptive learning system helps me focus on areas where I need improvement. It's like having a personal tutor!"</p>
                 <button className="btn btn-blue">Read 314 reviews</button>
-                <Image src="/avatar.svg" alt="User Avatar" width={300} height={300} className="rounded-full mb-2" /> 
+                <Image src="/avatar.svg" alt="User Avatar" width={150} height={150} className="rounded-full mb-2" /> 
               </AnimatedBentoContent>
             </div>
           </div>
@@ -141,7 +141,7 @@ export default function HeroSection() {
             <h3 className="text-lg font-bold mb-2">Customizable Flashcards</h3>
             <p className="text-sm mb-4">Tailor your flashcards to your unique learning style. Add images, audio, and rich text to create engaging and memorable study materials. Our AI can even suggest relevant media to enhance your learning experience.</p>
             <button className="btn btn-dark">Customize Now</button>
-            <Image src="/study-illustration.svg" alt="AI Study Plans" width={150} height={150} />
+           
           </AnimatedBentoContent>
         </div>
         <div className="bento-item bento-item-coral">
@@ -150,7 +150,7 @@ export default function HeroSection() {
             <p className="text-sm mb-4">Let our AI create personalized study plans based on your learning goals and progress. Optimize your study time and achieve better results.</p>
             
             <button className="btn btn-dark">Generate Plan</button>
-            <Image src="/study-illustration.svg" alt="AI Study Plans" width={150} height={150} />
+            
           </AnimatedBentoContent>
         </div>
         <div className="bento-item bento-item-coral">
